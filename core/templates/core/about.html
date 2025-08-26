@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h2>{{ page_name }}</h2>
+<p>This is the About Page</p>
+<p>Check template inheritance & filters ✅</p>
+<p>Current year using context: {{ year }}</p>
+{% endblock %}
+
+{% block sidebar %}
+<p>Custom Sidebar for About</p>
+{% endblock %}
+
+{% block footer_extra %}
+<p>Custom footer content for About page</p>
+{% endblock %}

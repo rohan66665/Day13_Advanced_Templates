@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>{{ page_name }}</h2>
+<p>This is the Home Page</p>
+<p>Django Template Inheritance working fine ✅</p>
+
+<p>Current year: {{ year }}</p>
+
+<p>Uppercase example: {{ "django"|upper }}</p>
+<p>Lowercase example: {{ "DJANGO"|lower }}</p>
+<p>Title example: {{ "advanced templates project"|title }}</p>
+<p>Truncated: {{ "This is a very long sentence"|truncatechars:20 }}</p>
+
+<ul>
+{% for fruit in fruits %}
+    <li>{{ fruit|upper }}</li>
+{% empty %}
+    <li>No fruits available</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% block sidebar %}
+<p>Custom Sidebar for Home</p>
+{% endblock %}
